@@ -10,10 +10,7 @@ namespace MySnake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point();
-            p1.x = 5;
-            p1.y = 4;
-            p1.sym = '@';
+            Point p1 = new Point(5,4,'+');
             p1.Draw();
 
 
