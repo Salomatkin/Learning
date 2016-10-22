@@ -11,7 +11,7 @@ namespace MySnake
         static void Main(string[] args)
         {
             int x1 = 5;
-            int y1 = 3;
+            int y1 = 6;
             char sym1 = '&';
 
             Draw(x1, y1, sym1);
@@ -24,9 +24,6 @@ namespace MySnake
 
             Console.Read();
         }
-
-
-
         static void Draw(int x, int y, char sym)
         {
             Console.SetCursorPosition(x, y);
