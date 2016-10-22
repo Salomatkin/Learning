@@ -16,6 +16,12 @@ namespace MySnake
 
             Draw(x1, y1, sym1);
 
+            int x2 = 8;
+            int y2 = 5;
+            char sym2 = '#';
+
+            Draw(x2, y2, sym2);
+
             Console.Read();
         }
         static void Draw(int x, int y, char sym)
