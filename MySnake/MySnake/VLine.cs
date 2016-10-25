@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace MySnake
 {
-    class VLine
+    class VLine :Figure
     {
-        List<Point> pList;
         public VLine(int x, int y1, int y2, char sym)
         {
             pList = new List<Point>();
@@ -17,13 +16,5 @@ namespace MySnake
                 pList.Add(new Point(x, y, sym));
             }
         }
-        public void drw()
-        {
-            foreach (Point p in pList)
-            {
-                p.Draw();
-            }
-        }
-
     }
 }
