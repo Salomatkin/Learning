@@ -10,21 +10,23 @@ namespace MySnake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(5, 4, '+');
-            Point p2 = new Point(7, 2, '*');
-            Point p3 = new Point(2, 9, '#');
-            Point p4 = new Point(4, 8, '@');
-
             List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
-            pList.Add(p3);
-            pList.Add(p4);
+            pList.Add(new Point(5, 4, '+'));
+            pList.Add(new Point(7, 2, '*'));
+            pList.Add(new Point(2, 9, '#'));
+            pList.Add(new Point(4, 8, '@'));
 
             foreach(Point i in pList)
             {
                 i.Draw();
             }
+
+            HLine lineH = new HLine(2, 12, 3, '=');
+            lineH.drw();
+
+            VLine lineV = new VLine(3, 3, 15, '|');
+            lineV.drw();
+
             Console.Read();
         }
 
