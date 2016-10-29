@@ -12,33 +12,19 @@ namespace MySnake
         {
             Console.SetBufferSize(80, 25);
 
-            HLine UpLine = new HLine(0, 78, 0, '+');
+//            HLine UpLine = new HLine(0, 78, 0, '+');
             HLine DownLine = new HLine(0, 78, 24, '+');
             VLine LeftLine = new VLine(0, 0, 24, '+');
             VLine RightLine = new VLine(78, 0, 24, '+');
 
-            UpLine.drw();
+            //            UpLine.drw();
+            (new HLine(0, 78, 0, '+')).drw;
             DownLine.drw();
             LeftLine.drw();
             RightLine.drw();
 
-            List<Point> pList = new List<Point>();
-            pList.Add(new Point(5, 4, '+'));
-            pList.Add(new Point(7, 2, '*'));
-            pList.Add(new Point(2, 9, '#'));
-            pList.Add(new Point(4, 8, '@'));
-
-            foreach(Point i in pList)
-            {
-                i.Draw();
-            }
-
-            HLine lineH = new HLine(2, 12, 3, '=');
-            lineH.drw();
-
-            VLine lineV = new VLine(3, 3, 15, '|');
-            lineV.drw();
-
+            Snake snake = new Snake(new Point(10, 10, '*'), 4, Dir.RIGHT);
+            snake.drw();
             Console.Read();
         }
 
