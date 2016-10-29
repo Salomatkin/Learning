@@ -40,5 +40,17 @@ namespace MySnake
             NewHead.Move(1, dir);
             return NewHead;  
         }
+        public void GetKey(ConsoleKey key)
+        {
+            if (key == ConsoleKey.LeftArrow)
+                dir = Dir.LEFT;
+            else if (key == ConsoleKey.RightArrow)
+                dir = Dir.RIGHT;
+            else if (key == ConsoleKey.UpArrow)
+                dir = Dir.UP;
+            else if (key == ConsoleKey.DownArrow)
+                dir = Dir.DOWN;
+        }
+
     }
 }
