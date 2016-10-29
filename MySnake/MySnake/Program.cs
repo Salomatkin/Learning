@@ -25,8 +25,20 @@ namespace MySnake
 
             Snake snake = new Snake(new Point(10, 10, '*'), 4, Dir.RIGHT);
             snake.drw();
-            snake.Creep();
 
+            while(true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey(true);
+                    snake.GetKey(key.Key);
+                }
+                System.Threading.Thread.Sleep(200);
+                snake.Creep();
+            }
+//            snake.Creep();
+//            Thread.Sleep(300);
+   
             //Console.Read();
         }
 
