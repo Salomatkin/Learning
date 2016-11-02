@@ -51,6 +51,19 @@ namespace MySnake
             else if (key == ConsoleKey.DownArrow)
                 dir = Dir.DOWN;
         }
+        internal bool Eat(Point rabbit)
+        {
+            Point head = GetNewHead();
+            if (head.IsHit(rabbit))
+            {
+                rabbit.sym = head.sym;
+                rabbit.Draw();
+                pList.Add(rabbit);
+                return true;
+            }
+            else
+                return false;
+        }
 
     }
 }
