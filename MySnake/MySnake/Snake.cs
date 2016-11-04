@@ -40,15 +40,25 @@ namespace MySnake
             NewHead.Move(1, dir);
             return NewHead;  
         }
+        internal bool IsHitTail()
+        {
+            var head = pList.Last();
+            for (int i=0; i < pList.Count - 2; i++)
+            {
+                if (head.IsHit(pList[i]))
+                    return true;
+            }
+            return false;
+        }
         public void GetKey(ConsoleKey key)
         {
-            if (key == ConsoleKey.LeftArrow)
+            if (key == ConsoleKey.LeftArrow && dir!=Dir.RIGHT)
                 dir = Dir.LEFT;
-            else if (key == ConsoleKey.RightArrow)
+            else if (key == ConsoleKey.RightArrow && dir != Dir.LEFT)
                 dir = Dir.RIGHT;
-            else if (key == ConsoleKey.UpArrow)
+            else if (key == ConsoleKey.UpArrow && dir != Dir.DOWN)
                 dir = Dir.UP;
-            else if (key == ConsoleKey.DownArrow)
+            else if (key == ConsoleKey.DownArrow && dir != Dir.UP)
                 dir = Dir.DOWN;
         }
         internal bool Eat(Point rabbit)
