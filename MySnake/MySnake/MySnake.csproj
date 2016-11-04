@@ -52,6 +52,7 @@
     <Compile Include="RabbitMaker.cs" />
     <Compile Include="Snake.cs" />
     <Compile Include="VLine.cs" />
+    <Compile Include="Walls.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
